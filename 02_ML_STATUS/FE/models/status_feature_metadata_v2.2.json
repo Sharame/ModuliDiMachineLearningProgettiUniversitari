@@ -1,0 +1,80 @@
+{
+  "version": "2.2",
+  "date_created": "2026-02-16T00:44:13.806466",
+  "n_features": 7,
+  "features": [
+    {
+      "name": "reps_mean",
+      "cohens_d": 3.3,
+      "correlation": -0.761,
+      "interpretation": "Average reps per set (Beginner higher)"
+    },
+    {
+      "name": "rpe_mean",
+      "cohens_d": 2.21,
+      "correlation": -0.673,
+      "interpretation": "RPE self-report (Beginner overestimate)"
+    },
+    {
+      "name": "total_sets",
+      "cohens_d": 2.61,
+      "correlation": 0.755,
+      "interpretation": "Training history length"
+    },
+    {
+      "name": "acwr_mean",
+      "cohens_d": 2.16,
+      "correlation": -0.691,
+      "interpretation": "Load management (Beginner higher ACWR)"
+    },
+    {
+      "name": "spike_weeks_count",
+      "cohens_d": 0.65,
+      "correlation": 0.247,
+      "interpretation": "Frequency of overload weeks"
+    },
+    {
+      "name": "load_progression",
+      "cohens_d": 1.0,
+      "correlation": 0.432,
+      "interpretation": "Monthly load growth rate"
+    },
+    {
+      "name": "skip_rate",
+      "cohens_d": 3.66,
+      "correlation": -0.839,
+      "interpretation": "Workout dropout rate (fatigue-driven)"
+    }
+  ],
+  "removed_features": [
+    {
+      "name": "consistency_score",
+      "reason": "Perfect leakage (correlation 1.000, deterministic)",
+      "cohens_d": "infinite",
+      "correlation": 1.0
+    },
+    {
+      "name": "load_mean",
+      "reason": "Borderline leakage risk (correlation 0.803)",
+      "cohens_d": 2.94,
+      "correlation": 0.803
+    },
+    {
+      "name": "observed_freq_weekly",
+      "reason": "Low discriminative power (Cohen's d 0.04)",
+      "cohens_d": 0.04,
+      "correlation": 0.016
+    }
+  ],
+  "train_test_split": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "stratified": true,
+    "n_train": 408,
+    "n_test": 102
+  },
+  "scaling": {
+    "method": "StandardScaler",
+    "fit_on": "train_set"
+  }
+}
