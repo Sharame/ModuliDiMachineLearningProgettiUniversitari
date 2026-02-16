@@ -1,0 +1,118 @@
+{
+  "split_strategy": "global_date",
+  "use_target_lags": true,
+  "pipeline_b_require_acwr_valid": true,
+  "pipelines": {
+    "A": {
+      "target": "performance_score_0_10",
+      "feature_cols": [
+        "impulse",
+        "tau_F",
+        "tau_D",
+        "fitness",
+        "fatigue",
+        "performance",
+        "acwr",
+        "acwr_rolling_7d_mean",
+        "fitness_rolling_7d_mean",
+        "impulse_rolling_7d_mean",
+        "acwr_rolling_14d_mean",
+        "fitness_rolling_14d_mean",
+        "impulse_rolling_14d_mean",
+        "acwr_rolling_28d_mean",
+        "fitness_rolling_28d_mean",
+        "impulse_rolling_28d_mean",
+        "acwr_rolling_7d_std",
+        "acwr_rolling_14d_std",
+        "acwr_lag_7d",
+        "fitness_lag_7d",
+        "fatigue_lag_7d",
+        "performance_score_0_10_lag_7d",
+        "injury_risk_score_lag_7d",
+        "acwr_lag_14d",
+        "fitness_lag_14d",
+        "fatigue_lag_14d",
+        "performance_score_0_10_lag_14d",
+        "injury_risk_score_lag_14d",
+        "delta_fitness_28d",
+        "delta_impulse_28d",
+        "fitness_trend_14d",
+        "acwr_acceleration_7d",
+        "TSB_x_ACWR",
+        "fitness_x_fatigue",
+        "impulse_x_acwr"
+      ],
+      "train_shape": [
+        68694,
+        39
+      ],
+      "test_shape": [
+        17131,
+        39
+      ],
+      "constant_cols_dropped": [
+        "beta_F",
+        "beta_D"
+      ],
+      "split_date": "2025-11-19"
+    },
+    "B": {
+      "target": "injury_risk_score",
+      "feature_cols": [
+        "impulse",
+        "tau_F",
+        "tau_D",
+        "fitness",
+        "fatigue",
+        "performance",
+        "acwr",
+        "acwr_rolling_7d_mean",
+        "fitness_rolling_7d_mean",
+        "impulse_rolling_7d_mean",
+        "acwr_rolling_14d_mean",
+        "fitness_rolling_14d_mean",
+        "impulse_rolling_14d_mean",
+        "acwr_rolling_28d_mean",
+        "fitness_rolling_28d_mean",
+        "impulse_rolling_28d_mean",
+        "acwr_rolling_7d_std",
+        "acwr_rolling_14d_std",
+        "acwr_lag_7d",
+        "fitness_lag_7d",
+        "fatigue_lag_7d",
+        "performance_score_0_10_lag_7d",
+        "injury_risk_score_lag_7d",
+        "acwr_lag_14d",
+        "fitness_lag_14d",
+        "fatigue_lag_14d",
+        "performance_score_0_10_lag_14d",
+        "injury_risk_score_lag_14d",
+        "delta_fitness_28d",
+        "delta_impulse_28d",
+        "fitness_trend_14d",
+        "acwr_acceleration_7d",
+        "TSB_x_ACWR",
+        "fitness_x_fatigue",
+        "impulse_x_acwr"
+      ],
+      "train_shape": [
+        68694,
+        39
+      ],
+      "test_shape": [
+        17131,
+        39
+      ],
+      "constant_cols_dropped": [
+        "beta_F",
+        "beta_D"
+      ],
+      "split_date": "2025-11-19"
+    }
+  },
+  "meta_cols": [
+    "user_id",
+    "date",
+    "experience_label"
+  ]
+}
